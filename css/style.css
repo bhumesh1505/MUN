@@ -1,0 +1,21 @@
+/* Required height of parents of the Full Page Intro and Intro itself */
+/*html,
+body,
+.view {
+  height: 100%; 
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+.page-footer {
+  background-color: #1C2331; }
+*/

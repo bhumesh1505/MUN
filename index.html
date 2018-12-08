@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <link href="css/resCarousel.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong:300,400,400i,500,600,700" />
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+        .resCarousel-inner .item {
+            text-align: center;
+        }
+        
+        .resCarousel-inner .item .tile div,
+        .banner .item div {
+            width: 100%;
+            text-align: center;
+            /*box-shadow: 0 1px 1px rgba(0, 0, 0, .1);*/
+        }
+        
+        .resCarousel-inner .item h1 {
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+        }
+        
+        .item .tile div {
+            color: white;
+        }
+        
+        .item div h1 {
+            background: rgba(0, 0, 0, .4);
+        }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331!important;
+            }
+        }
+        #memberName{
+          font-size: 25px;
+          color: white;
+          margin-top: 7px;
+        }
+        #memberImage{
+          height: 200px;
+          width: auto;
+          background: rgba(50, 50, 100, 0.7);
+          padding: 10px;
+        }
+        #committeeInfo{
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+        #agenda{
+          font-size: 20px;
+        }
+        #viewMember
+        {
+          height: 200px;
+          width: 200px;
+        }
+        #committeeMask{
+          background:rgba(0,0,0,0.7);
+        }
+        #socialIcons{
+           color: white;
+           font-size: 20px;
+           border: 1px solid white;
+           border-radius: 50%;
+           height: 30px;
+           width: 30px;
+           padding: 4px;
+           margin: 5px;
+        }
+        #socialIcons:hover{
+          color: black;
+          background-color: white;
+        }
+        #committeeHeading{
+          font-size: 45px;
+          color: white;
+        }
+        #registration:hover{
+          background: rgba(255,255,255,0.9);
+          color: black;
+          border: 2px solid black;
+        }
+        #registration2:hover{
+          background: rgba(255,255,255,0.9);
+          color: black;
+          border: 2px solid black;
+        }
+        #button2{
+          background: rgba(255,255,255,0.9);
+          color: black;
+          font-size: 16px;
+          padding: 5px;
+        }
+        #button2:hover{
+          background: rgba(255,255,0,0.8);
+          color: black;
+        }
+        
+        #registration,#registration2{
+          background-color: black;
+          color: white;
+          padding: 10px;
+          border: 2px solid gray;
+        }
+        .nav-link:hover{
+          color: white;
+        }
+        .card1:hover{
+          border-bottom: 2px solid blue;
+          border-radius: 50%;
+          margin-bottom: -2px;
+        }
+        .card1{
+          margin-top: 15px;
+        }
+        .card
+        {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .mask{
+          padding-left: 15%;
+          padding-right: 15%;
+        }
+        .committeeName{
+          font-size: 25px;
+          color: white;
+        }
+        #logo{
+          height: 2em;
+
+        }
+  </style>
+  <script type="text/javascript">
+    function foo(){/*
+      $('#registration').addClass('animated rubberBand');*/
+      document.getElementById("committeeName").style.color = "blue";
+    }
+  </script>
+</head>
+
+<body style="background-color: black;">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="images/logo/logo2.png" id="logo">
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">HOME
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#message">
+              MESSAGE
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#committee">COMMITTEE
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SECRETARIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PRICING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACTS</a>
+          </li>          
+        </ul>
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="#" class="nav-link border border-light rounded animated pulse infinite"
+              target="_blank">
+              <i class="fa fa-pencil mr-2"></i>
+              REGISTRATION
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Full Page Intro -->
+  <div class="view" style="background-image: url('images/bg.jpg'); background-repeat: no-repeat; background-size: cover;background-position: center;" id="home">
+ 
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+      <div class="text-center white-text mx-5 wow fadeIn">
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <center>
+          <div class="animated pulse slower infinite">
+            <img src="images/logo/axis.png" style="width:70%;height: auto;">
+          </div>
+        </center>
+
+        <br>
+        <br>
+        
+        <center>
+          <div class="animated pulse slower infinite">
+            <img src="images/logo/logo1.png" style="width:50%;height: auto;">
+          </div>
+        </center>
+        <br>
+        <br>
+        <br>
+        
+        <a id="registration2" href="#main" class="btn btn-lg" >KNOW MORE
+          <i class="fa fa-arrow-down ml-2 animated infinite fadeInDown"></i>
+        </a>
+
+        <a target="_blank" id="registration" href="#" class="btn btn-lg" >REGISTRATION
+          <i class="fa fa-pencil ml-2"></i>
+        </a>
+
+      </div>
+      <!-- Content -->
+
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+
+  <!--Main layout-->
+  <main id="main" style="background: rgba(0,0,0,1);"> 
+
+    <div class="container">
+      <hr class="my-5">
+
+      <!--Section: Main features & Quick Start-->
+      <section id="about">
+
+        <h3 class="h3 text-center mb-5 wow zoomInUp" style="color: white;font-size: 45px;">About MUN</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4 wow fadeInLeft">
+            <!--First row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fa fa-code fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Bootstrap 4</h5>
+                <p class="grey-text">Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.</p>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <div style="height:30px"></div>
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fa fa-book fa-2x blue-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Detailed documentation</h5>
+                <p class="grey-text">We give you detailed user-friendly documentation at your disposal. It will help you to implement your ideas
+                  easily.
+                </p>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <div style="height:30px"></div>
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fa fa-graduation-cap fa-2x cyan-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Lots of tutorials</h5>
+                <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
+                  how to use MDB as well as other technologies.</p>
+              </div>
+            </div>
+            <!--/Third row-->
+
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 wow fadeInRight">
+
+            <p class="h5 text-center mb-4">Watch our "5 min Quick Start" tutorial</p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+    </div>
+
+    <section id="message" style="background-image: url('images/4.jpg');color: white;
+      background-size: cover;
+      background-position: center;
+      " id="message">
+      <div class="container" style="background: rgba(0,0,0,0.5);">
+        <br>
+      <h2 class="my-5 h3 text-center wow fadeInDown" style="color: white;font-size: 45px;">Message</h2>
+      <!--First row-->
+      <div class="row features-small mb-5 mt-3">
+
+        <!--First column-->
+        <div class="col-md-4 wow bounceInLeft">
+          <!--First row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">Free for personal and commercial use</h6>
+              <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.
+              </p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/First row-->
+
+          <!--Second row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">400+ UI elements</h6>
+              <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
+              </p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/Second row-->
+
+          <!--Third row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">600+ icons</h6>
+              <p class="grey-text">Hundreds of useful, scalable, vector icons at your disposal.</p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/Third row-->
+
+        </div>
+        <!--/First column-->
+
+        <!--Second column-->
+        <div class="col-md-4 flex-center wow zoomInUp">
+          <img src="images/logo/logo2.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid animated pulse infinite">
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-md-4 mt-2 wow bounceInRight">
+          <!--First row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">70+ CSS animations</h6>
+              <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your project and delight your visitors.
+              </p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/First row-->
+
+          <!--Second row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">Plenty of useful templates</h6>
+              <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/Second row-->
+
+          <!--Third row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fa fa-check-circle fa-2x indigo-text"></i>
+            </div>
+            <div class="col-10">
+              <h6 class="feature-title">Easy installation</h6>
+              <p class="grey-text">5 minutes, a few clicks and... done. You will be surprised at how easy it is.
+              </p>
+              <div style="height:15px"></div>
+            </div>
+          </div>
+          <!--/Third row-->
+
+        </div>
+        <!--/Third column-->
+
+      </div>
+      <!--/First row-->
+       </div>
+    </section>
+    <!--Section: Not enough-->
+
+    <!--Section: More-->
+    <section id="committee">
+
+      <h2 class=" h3 text-center wow slideInDown" style="font-size: 45px;color: white;">Committiees</h2>
+      <center>
+      <div style="width: 80%;" >
+        <div class="row">
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            
+            <!-- Card -->
+            <div class="card wow zoomInLeft " style="background-color: black;height: 100%;">
+
+              <!-- Card image -->
+              <div class="view overlay" style="padding-left:50px;padding-right:50px;padding-top:10px;">
+                <img class="card-img-top" src="images/logo/unsc.png" alt="Card image cap">
+                <a href="#unsc">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">DISCUSSING NON-PROLIFERATION TREATY (NPT), WITH SPECIAL EMPHASIS
+                    ON RATIFICATION, EXPANSION AND REFORMS.</div>
+                </a>
+                <br>
+              </div>
+              <a href="#unsc">
+                <div class="committeeName text-center">UNSC</div>
+              </a>
+            </div>
+            <!-- Card -->
+          </div>
+          
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            
+            <!-- Card -->
+            <div class="card wow zoomInUp" style="background-color: black;height: 100%;">
+
+              <!-- Card image -->
+              <div class="view overlay" style="padding-left:50px;padding-right: 50px;padding-top:10px;">
+                <img class="card-img-top " src="images/logo/disec.png" alt="Card image cap">
+                <a href="#disec">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">ASSESSING THE POTENTIAL RISK OF THE WEAPONIZATION OF ARTIFICIAL
+                  INTELLIGENCE AND BIG DATA.</div>
+                </a>
+                <br>
+              </div>
+              <a href="#disec">
+                <div class="committeeName text-center">DISEC</div>
+              </a>
+            </div>
+            <!-- Card -->
+
+          </div>
+
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            
+            <!-- Card -->
+            <div class="card wow zoomInRight" style="background-color: black;height: 100%;">
+
+              <!-- Card image -->
+              <div class="view overlay" style="padding-left: 50px;padding-right: 50px;">
+                <img class="card-img-top" src="images/logo/unhrc.png" alt="Card image cap">
+                <a href="#unhrc">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">DATA PRIVACY AND ITS IMPORTANCE IN THE GLOBAL AGE</div>
+                </a>
+                <br>
+              </div>
+              <a href="#unhrc">
+                <div class="committeeName text-center">UNHRC</div>
+              </a>
+            </div>
+            <!-- Card -->
+
+          </div>
+
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            
+            <!-- Card -->
+            <div class="card wow zoomInLeft" style="background-color: black;height: 100%;height: 100%;">
+
+              <!-- Card image -->
+              <div class="view overlay" style="padding-left:50px;padding-right: 50px;padding-top:50px;">
+                <img class="card-img-top" src="images/logo/isa.png" alt="Card image cap">
+                <a href="#isa">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">DEVELOPMENT OF SPACE SYSTEM FOR CONSERVATION AND ENERGY SOLUTIONS
+                  AND WAYS TO CURB OUTER SPACE POLLUTION.</div>
+                </a>
+                <br>
+              </div>
+              <a href="#isa">
+                <div class="committeeName text-center">ISA</div>
+              </a>
+            </div>
+            <!-- Card -->
+          </div>
+          
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            
+            <!-- Card -->
+            <div class="card wow zoomInDown" style="background-color: black;height: 100%;">
+
+              <!-- Card image -->
+              <div class="view overlay" style="padding-left:50px;padding-right: 50px;padding-top:10px;">
+                <img class="card-img-top" src="images/logo/who.png" alt="Card image cap">
+                <a href="#who">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">BIONICS.</div>
+                </a>
+                <br>
+              </div>
+              <a href="#who">
+                <div class="committeeName text-center">WHO</div>
+              </a>
+              </div>
+          </div>
+
+          <div class="card1 col-sm-12 col-md-6 col-lg-4">
+            <!-- Card -->
+            <div class="card wow zoomInRight" style="background-color: black;height: 100%;">
+                <div class="view overlay" style="padding-left:50px;padding-right: 50px;padding-top:10px;">
+                <img class="card-img-top" src="images/logo/loksabha.png" alt="Card image cap">
+                <a href="#loksabha">
+                  <div class="mask rgba-indigo-strong text-center white-text  flex-center">GMO IN AGRICULTURE.</div>
+                </a>
+                <br>
+              </div>
+              <a href="#loksabha">
+                <div class="committeeName text-center">LOKSABHA</div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </center>
+    </section>
+    
+    <br>
+    <br>
+    
+    <section id="unsc" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">UNSC</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                One of the principal organs of the UN, its main focus is to maintain International peace and security. It
+                makes changes in the UN charter, appoints new members in the council, and along with the General
+                Assembly (GA) elects judges of the International Court of Judges (ICJ). It consists of total 15 members;
+                5 Permanent and 10 Non-Permanent and the rest observers, each member has 1 vote. It calls upon the
+                members to the dispute and makes attempts to solve it peacefully.
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : DISCUSSING NON-PROLIFERATION TREATY (NPT), WITH SPECIAL EMPHASIS ON RATIFICATION, <br> EXPANSION AND REFORMS.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <section id="disec" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">DISEC</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                The first assembly deals with the disarmament and related issues that affect international security and seeks out feasible solution to the problem. It works within the UN charter and relates all the powers and functions of any other organizations to maintain peace and security within its regime.
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : ASSESSING THE POTENTIAL RISK OF THE WEAPONIZATION OF ARTIFICIAL
+                          INTELLIGENCE AND BIG DATA.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <section id="unhrc" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">UNHRC</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                A UN body which deals protection and promotion of human rights, it was established by UN General Assembly on March 25, 2006. UNHRC has 47 members elected for a term of 3 years on a regional basis: 13 for Africa, 13 for Asia, 6 for Eastern Europe, 8 for Latin America and the Caribbean (GRULAC), and 7 for the Western European and Others Group (WEOG).
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : DATA PRIVACY AND ITS IMPORTANCE IN THE GLOBAL AGE.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <section id="isa" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">ISA</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                An innovation by TECH MUN, ISA deals with the discussion of space related problems, formation of laws, and suggesting solutions the ongoing issues. The delegates in ISA would be representing the respective national space agencies eg. ISRO, NASA etc. Double delegation would be allowed in committee.
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : DEVELOPMENT OF SPACE SYSTEM FOR CONSERVATION AND ENERGY SOLUTIONS AND WAYS TO CURB OUTER <br> SPACE POLLUTION.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <section id="who" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">WHO</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                A specialized agency whose main motive is to discuss problems and solutions related to International health. It works with the countries and other organizations to maintain a healthy environment across the globe. Its current priorities include communicable diseases like ebola, malaria and to promote healthy eating.
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : BIONICS.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <section id="loksabha" style="background-image: url('images/8.png');color: white;
+      background-size: cover;
+      background-position: center;
+      ">
+      <div id="committeeMask">
+      <br>
+      <br>
+      <br>
+      <h2 class=" h3 text-center wow slideInDown" id="committeeHeading">LOKSABHA</h2>
+      <center>
+        <div style="width: 90%;">
+          <div class="row">
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-6 white-text">
+              
+              <br>
+              <div id="committeeInfo">
+                The Lok Sabha (House of the People) is the lower house of India's bicameral Parliament. Members of the Lok Sabha are elected by adult universal suffrage and a first-past-the-post system to represent their respective constituencies, and they hold their seats for five years or until the body is dissolved by the President on the advice of the council of ministers. The house meets in the Lok Sabha Chambers of the Sansad Bhavan in New Delhi. The maximum strength of the house is 552. In TechMUN the main motive of Loksabha is to discuss and implement the improving developments in India.
+              </div>
+              <br>
+              <div id="agenda">
+                <strong>
+                  AGENDA : GMO IN AGRICULTURE.
+                </strong>
+              </div>
+              <a id="button2" href="#main" class="btn peach-gradient" >COUNTRY MATRIX
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 wow shake">
+              <div class="view overlay wow zoomInUp" id="viewMember" >
+                <div class="" style="border-radius: 50%;">
+                  <img id="memberImage" class="rounded-circle" src="images/member1.png">
+                </div>
+                <div class="mask rgba-indigo-strong text-center white-text flex-center" style="border-radius:50%;">
+                  <div>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#main" >
+                      <i id="socialIcons" class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="memberName">
+                NAME HERE
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </center>
+      <br>
+      <br>
+
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="secretaries" style="background-image: url('images/secretaries.jpg');background-size: cover;background-position: center;">
+      <center>
+        <br>
+        <br>
+        
+        <div style="font-size: 35px;color: white;"><strong>SECRETARIES</strong></div>>
+        <br>
+        <br>
+        
+        <div class="p8" style="width: 90%;">
+            <div class="resCarousel" data-items="2-4-4-4" data-interval="2000" data-slide="1" data-animator="lazy">
+                <div class="resCarousel-inner" >
+
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;" >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tile">
+                          <!-- Card -->
+                          <div class="card" style="width:100%;background-color:black;background-size: cover;background-position: center;  " >
+                            <center>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                              <center>
+                              <img class="card-img-top rounded-circle"  style="margin-top: 15px;border-radius: 50%;height: 150px;width: 150px;" id="memberImage" src="images/member1.png" alt="Card image cap">
+                              </center>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+                              <!-- Title -->
+                              <h4 class="card-title white-text">Card title</h4>
+                              <hr style="color: white;">
+                              <div>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#main" >
+                                  <i id="socialIcons" class="fa fa-instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                            </center>
+                          </div>
+                          <!-- Card -->
+                        </div>
+                    </div>
+
+                </div>
+                <a class="leftRs flex-center text-center" style="background: rgba(255,255,255,0.5);color: white;font-size: 40px;"><i class="fa fa-angle-double-left"></i></a>
+                <a class="rightRs flex-center text-center" style="background: rgba(255,255,255,0.5);color: white;font-size: 40px;" ><i class="fa fa-angle-double-right"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+      </center>
+
+    </section>
+
+    <section id="pricing" style="visibility: hidden;">
+      <div class="container">
+        <center>
+          <div style="width: 80%;border: 2px solid white;">
+            <div style="font-size: 30px;color: white;">
+              <br>
+              <strong>PRICING</strong>
+            </div>
+            <br>
+            <div>
+              <table class="text-center white-text" style="text-align: left;" width="100%"  cellpadding="10">
+                <tr>
+                  <td rowspan="2" style="font-size: 25px;"><i class="fa fa-rupee"></i> 1000</td>
+                  <td style="font-size: 20px;text-align: left;">Registration and conference fees.</td>
+                </tr>
+                <tr>
+                  <td style="font-size: 20px;text-align: left;">Lunch for both days.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="font-size: 20px;text-align: left;">Delegate kit.</td>
+                </tr>
+                <tr>
+                  <td rowspan="2" style="font-size: 25px;"><button type="button ">REGISTER</button></td>
+                  <td style="font-size: 20px;text-align: left;">Participation certificate.</td>
+                </tr>
+                <tr>
+                  <td style="font-size: 20px;text-align: left;">An amazing experience</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </center>
+      </div>
+    </section>
+
+
+    <br>
+    <br>
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
+        <i class="fa fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start free tutorial
+        <i class="fa fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fa fa-facebook mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fa fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fa fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+        <i class="fa fa-google-plus mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+        <i class="fa fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+        <i class="fa fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+        <i class="fa fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+        <i class="fa fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+<!-- initialize jQuery Library --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+
+  <script>
+        //ResCarouselCustom();
+        var pageRefresh = true;
+
+        function ResCarouselCustom() {
+            var items = $("#dItems").val(),
+                slide = $("#dSlide").val(),
+                speed = $("#dSpeed").val(),
+                interval = $("#dInterval").val()
+
+            var itemsD = "data-items=\"" + items + "\"",
+                slideD = "data-slide=\"" + slide + "\"",
+                speedD = "data-speed=\"" + speed + "\"",
+                intervalD = "data-interval=\"" + interval + "\"";
+
+
+            var atts = "";
+            atts += items != "" ? itemsD + " " : "";
+            atts += slide != "" ? slideD + " " : "";
+            atts += speed != "" ? speedD + " " : "";
+            atts += interval != "" ? intervalD + " " : ""
+
+            //console.log(atts);
+
+            var dat = "";
+            dat += '<h4 >' + atts + '</h4>'
+            dat += '<div class=\"resCarousel\" ' + atts + '>'
+            dat += '<div class="resCarousel-inner">'
+            for (var i = 1; i <= 14; i++) {
+                dat += '<div class=\"item\"><div><h1>' + i + '</h1></div></div>'
+            }
+            dat += '</div>'
+            dat += '<button class=\'btn btn-default leftRs\'><i class=\"fa fa-fw fa-angle-left\"></i></button>'
+            dat += '<button class=\'btn btn-default rightRs\'><i class=\"fa fa-fw fa-angle-right\"></i></button>    </div>'
+            console.log(dat);
+            $("#customRes").html(null).append(dat);
+
+            if (!pageRefresh) {
+                ResCarouselSize();
+            } else {
+                pageRefresh = false;
+            }
+            //ResCarouselSlide();
+        }
+
+        $("#eventLoad").on('ResCarouselLoad', function() {
+            //console.log("triggered");
+            var dat = "";
+            var lenghtI = $(this).find(".item").length;
+            if (lenghtI <= 30) {
+                for (var i = lenghtI; i <= lenghtI + 10; i++) {
+                    dat += '<div class="item"><div class="tile"><div><h1>' + (i + 1) + '</h1></div><h3>Title</h3><p>content</p></div></div>'
+                }
+                $(this).append(dat);
+            }
+        });
+    </script>
+    <script src="js/resCarousel.js"></script>
+  
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+    
+</body>
+
+</html>
