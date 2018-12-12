@@ -18,137 +18,9 @@
   <link href="css/resCarousel.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong:300,400,400i,500,600,700" />
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
   <style type="text/css">
-        .resCarousel-inner .item {
-            text-align: center;
-        }
-        
-        .resCarousel-inner .item .tile div,
-        .banner .item div {
-            width: 100%;
-            text-align: center;
-            /*box-shadow: 0 1px 1px rgba(0, 0, 0, .1);*/
-        }
-        
-        .resCarousel-inner .item h1 {
-            display: table-cell;
-            vertical-align: middle;
-            color: white;
-        }
-        
-        .item .tile div {
-            color: white;
-        }
-        
-        .item div h1 {
-            background: rgba(0, 0, 0, .4);
-        }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-            .navbar:not(.top-nav-collapse) {
-                background: #1C2331!important;
-            }
-        }
-        #memberName{
-          font-size: 25px;
-          color: white;
-          margin-top: 7px;
-        }
-        #memberImage{
-          height: 200px;
-          width: auto;
-          background: rgba(50, 50, 100, 0.7);
-          padding: 10px;
-        }
-        #committeeInfo{
-          padding-right: 20px;
-          padding-left: 20px;
-        }
-        #agenda{
-          font-size: 20px;
-        }
-        #viewMember
-        {
-          height: 200px;
-          width: 200px;
-        }
-        #committeeMask{
-          background:rgba(0,0,0,0.7);
-        }
-        #socialIcons{
-           color: white;
-           font-size: 20px;
-           border: 1px solid white;
-           border-radius: 50%;
-           height: 30px;
-           width: 30px;
-           padding: 4px;
-           margin: 5px;
-        }
-        #socialIcons:hover{
-          color: black;
-          background-color: white;
-        }
-        #committeeHeading{
-          font-size: 45px;
-          color: white;
-        }
-        #registration:hover{
-          background: rgba(255,255,255,0.9);
-          color: black;
-          border: 2px solid black;
-        }
-        #registration2:hover{
-          background: rgba(255,255,255,0.9);
-          color: black;
-          border: 2px solid black;
-        }
-        #button2{
-          background: rgba(255,255,255,0.9);
-          color: black;
-          font-size: 16px;
-          padding: 5px;
-        }
-        #button2:hover{
-          background: rgba(255,255,0,0.8);
-          color: black;
-        }
-        
-        #registration,#registration2{
-          background-color: black;
-          color: white;
-          padding: 10px;
-          border: 2px solid gray;
-        }
-        .nav-link:hover{
-          color: white;
-        }
-        .card1:hover{
-          border-bottom: 2px solid blue;
-          border-radius: 50%;
-          margin-bottom: -2px;
-        }
-        .card1{
-          margin-top: 15px;
-        }
-        .card
-        {
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-        .mask{
-          padding-left: 15%;
-          padding-right: 15%;
-        }
-        .committeeName{
-          font-size: 25px;
-          color: white;
-        }
-        #logo{
-          height: 2em;
-
-        }
+      
   </style>
   <script type="text/javascript">
     function foo(){/*
@@ -180,8 +52,8 @@
 
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">HOME
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="http://www.axisvnit.org/">HOME
             </a>
           </li>
           <li class="nav-item">
@@ -193,20 +65,36 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#committee">COMMITTEE
-            </a>
+
+            <!-- Split button -->
+            <div class="btn-group">
+              <a class="nav-link" href="#committee">COMMITTEE</a>
+              <button type="button" class="dropdown-toggle" style="background: transparent;border: none;margin-left: -10px;color: white;" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#unsc">UNSC</a>
+                <a class="dropdown-item" href="#disec">DISEC</a>
+                <a class="dropdown-item" href="#unhrc">UNHRC</a>
+                <a class="dropdown-item" href="#isa">ISA</a>
+                <a class="dropdown-item" href="#who">WHO</a>
+                <a class="dropdown-item" href="#loksabha">LOKSABHA</a>
+              </div>
+            </div>
+
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SECRETARIES</a>
+            <a class="nav-link" href="#secretaries">SECRETARIES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">PRICING</a>
+            <a class="nav-link" href="#pricing">PRICING</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTACTS</a>
+            <a class="nav-link" href="#contacts">CONTACTS</a>
           </li>          
         </ul>
         <!-- Right -->
@@ -240,7 +128,7 @@
         
         <center>
           <div class="animated pulse slower infinite">
-            <img src="images/logo/axis.png" style="width:70%;height: auto;">
+            <img src="images/logo/axis.png" id="axisNameImg">
           </div>
         </center>
 
@@ -249,9 +137,10 @@
         
         <center>
           <div class="animated pulse slower infinite">
-            <img src="images/logo/logo1.png" style="width:50%;height: auto;">
+            <img src="images/logo/logo1.png" id="axisLogoImg">
           </div>
         </center>
+
         <br>
         <br>
         <br>
@@ -260,7 +149,7 @@
           <i class="fa fa-arrow-down ml-2 animated infinite fadeInDown"></i>
         </a>
 
-        <a target="_blank" id="registration" href="#" class="btn btn-lg" >REGISTRATION
+        <a target="_blank" id="registration" style="width: auto;" href="#" class="btn btn-lg" >REGISTRATION
           <i class="fa fa-pencil ml-2"></i>
         </a>
 
@@ -355,107 +244,37 @@
       background-size: cover;
       background-position: center;
       " id="message">
-      <div class="container" style="background: rgba(0,0,0,0.5);">
+      <div  style="background: rgba(0,0,0,0.5);width: 90%;margin-left: 5%;margin-right: 5%;">
         <br>
       <h2 class="my-5 h3 text-center wow fadeInDown" style="color: white;font-size: 45px;">Message</h2>
       <!--First row-->
       <div class="row features-small mb-5 mt-3">
 
         <!--First column-->
-        <div class="col-md-4 wow bounceInLeft">
-          <!--First row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">Free for personal and commercial use</h6>
-              <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.
-              </p>
-              <div style="height:15px"></div>
-            </div>
+        <div class="col-md-5 wow bounceInLeft">
+          <center><div id="messageHeading"><strong>Message from Secretary General</strong></div></center>
+          <div id="messageInfo">
+          AXIS’19 takes immense pleasure to announce the organisation of the AXIS MUN,  for the first time ever in VNIT. Premiering this February is a legacy, a pride, a zeal that has been carried over ever since the start of this wonder, which has been inspiring, lives throughout the world, all for a better cause. A Model United Nations is an academic simulation of the United Nations in which participants assume the role of diplomats from different countries and deliberate over international issues. While the direct lessons from MUNs are manifold, the indirect benefits are the ones that stay with you for a lifetime. The ability to dissect and analyse seemingly complex concepts, to acknowledge and understand the multifaceted nature of problems, and most importantly, to actively listen to friends and foes alike, is what shelves MUNs in the “invaluable” section of the library that is life.So this year, gear up for an experience like never before, where you magnify views from all directions of the room and in the journey solidify your own. The AXIS team hopes to receive humongous interest and participation for when it’s about modelling the future with our very own hands, who wouldn’t came and delegate their lives out. Yours diplomatically,(GS)
           </div>
-          <!--/First row-->
-
-          <!--Second row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">400+ UI elements</h6>
-              <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
-              </p>
-              <div style="height:15px"></div>
-            </div>
-          </div>
-          <!--/Second row-->
-
-          <!--Third row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">600+ icons</h6>
-              <p class="grey-text">Hundreds of useful, scalable, vector icons at your disposal.</p>
-              <div style="height:15px"></div>
-            </div>
-          </div>
-          <!--/Third row-->
-
         </div>
         <!--/First column-->
 
         <!--Second column-->
-        <div class="col-md-4 flex-center wow zoomInUp">
+        <div class="col-md-2 flex-center wow zoomInUp">
           <img src="images/logo/logo2.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid animated pulse infinite">
         </div>
         <!--/Second column-->
 
         <!--Third column-->
-        <div class="col-md-4 mt-2 wow bounceInRight">
-          <!--First row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">70+ CSS animations</h6>
-              <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your project and delight your visitors.
-              </p>
-              <div style="height:15px"></div>
-            </div>
+        <div class="col-md-5 mt-2 wow bounceInRight">
+          <center><div id="messageHeading"><strong>Message from Director General</strong></div></center>
+          <div id="messageInfo">
+          “More than ever before in human history, we share a common destiny. We can master it only if we face it together. And that, my friends, is why we have the United Nations.”
+          -Kofi Annan .
+          The world has changed its course in politics many times. Foreign policies of nations have taken steep turns, enemies have become allies and allies have become enemies. However, as Kofi Annan beautifully said that our final destiny is same. History will testify that our interdependence only increases with time. It is easy to adopt and enact “beggar be thy neighbour” policies. In fact, many countries have adopted this system. What is tough is to act in a manner in which everybody’s interests are been taken care of. And in such situations what should be the role of our young minds, the probable leaders of tomorrow? It is now time to find the hidden diplomat under us The Legacy is the footprint of the visionaries who have given their blood, sweat, and tears to build this conference from the ground up. It is the sense of fraternity that we’ve built through our inclusive approach to success. It is the promise that the bonds you make and the knowledge you gain will stay with you for a lifetime, irrespective of what capacity you participate in.
+          And thus I am proud to present you the very 1st edition of AXIS MUN 2018 as the Director General.
+          (Director General)
           </div>
-          <!--/First row-->
-
-          <!--Second row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">Plenty of useful templates</h6>
-              <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
-              <div style="height:15px"></div>
-            </div>
-          </div>
-          <!--/Second row-->
-
-          <!--Third row-->
-          <div class="row">
-            <div class="col-2">
-              <i class="fa fa-check-circle fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h6 class="feature-title">Easy installation</h6>
-              <p class="grey-text">5 minutes, a few clicks and... done. You will be surprised at how easy it is.
-              </p>
-              <div style="height:15px"></div>
-            </div>
-          </div>
-          <!--/Third row-->
-
         </div>
         <!--/Third column-->
 
@@ -1578,6 +1397,84 @@
       </div>
     </section>
 
+    <section id="faq" style="">
+      <center><div style="font-size: 35px;color: white;"><strong>FAQ</strong></div></center>
+      
+      <br>
+      <br>
+      
+      <div id="delivery" class="cd-faq-group container" style="max-width: 1024px;">
+        <div>
+          <a class="cd-faq-trigger" href="#0">What is MUN (Model United Nations)?</a>
+          <div class="cd-faq-content">
+            <p>Model UN or MUN is basically an academic simulation of of the United Nations that aims to encourage students to discuss about the major issues concerning the world and international politics.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">What is an Agenda?</a>
+          <div class="cd-faq-content">
+            <p>Agenda refers to the particle issue on which the committee would be discussing. It is the primary reason for assembling.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">Who can register for AXIS MUN?</a>
+          <div class="cd-faq-content">
+            <p>Participation in AXIS MUN is open to working professionals and students pursuing their undergraduate, post graduate and PhD. School students cannot participate.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">What is the registration process for AXIS MUN?</a>
+          <div class="cd-faq-content">
+            <p>A google form is available in the website when you tap on the registration tab. Fill your preferences accordingly so as to get your allotments.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">When will the allotments be released?</a>
+          <div class="cd-faq-content">
+            <p> It would be released at the end of January month when the registrations are closed.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">What are the dates of the conference?</a>
+          <div class="cd-faq-content">
+            <p> AXIS MUN conference will be conducted on 16th & 17th Feb 2019. It is a two day conference.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+        <div>
+          <a class="cd-faq-trigger" href="#0">How the double delegation process is done?</a>
+          <div class="cd-faq-content">
+            <p>?????????????????????????????????????</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+        <div>
+          <a class="cd-faq-trigger" href="#0">What are the modes of payment?</a>
+          <div class="cd-faq-content">
+            <p>There are two modes of payment, offline at the AXIS reception desk in VNIT and online. For any queries feel free to contact us at the number mentioned in the website.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+        <div>
+          <a class="cd-faq-trigger" href="#0">When will the details regarding the accommodation would be given?</a>
+          <div class="cd-faq-content">
+            <p> We’ll be sending a mail regarding all the details once you fill the google form.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+        <div>
+          <a class="cd-faq-trigger" href="#0">What is the best way to reach the venue?</a>
+          <div class="cd-faq-content">
+            <p>The venue of the conference is Visvesvaraya National Institute of Technology (VNIT), Nagpur. Various means of public and private transport are available from the railway station as from airport.</p>
+          </div> <!-- cd-faq-content -->
+        </div>
+
+
+      </div> <!-- cd-faq-group -->
+
+    </section>
 
     <br>
     <br>
@@ -1719,8 +1616,10 @@
         });
     </script>
     <script src="js/resCarousel.js"></script>
-  
-  <script type="text/javascript">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script type="text/javascript">
     // Animations initialization
     new WOW().init();
   </script>
