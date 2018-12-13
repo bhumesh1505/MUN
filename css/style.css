@@ -19,6 +19,10 @@ body,
 .page-footer {
   background-color: #1C2331; }
 */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:  white;
+  opacity: 1; /* Firefox */
+}
 #axisLogoImg{
   width:50%;
   height: auto;
