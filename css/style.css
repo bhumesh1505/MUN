@@ -84,7 +84,13 @@ body,
     #memberName{
       font-size: 25px;
       color: white;
+      font-weight: 800;
       margin-top: 7px;
+    }
+    #memberPost{
+      font-size: 20px;
+      color: white;
+      margin-top: 7px; 
     }
     #memberImage{
       height: 200px;
